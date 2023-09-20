@@ -8,7 +8,9 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('account/', include('App_Login.urls')),
-    #path('', include('App_Shop.urls')),  # Include App_Shop URLs under the root path
+    path('', include('App_Shop.urls')),  # Include App_Shop URLs under the root path
+    path('shop/', include('App_Order.urls')),
+    path('payment/', include('App_Payment.urls'))
 ]
 
 # Serve static files during development

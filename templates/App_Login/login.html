@@ -4,9 +4,8 @@
 {% block body_block %}
 <h2>Login:</h2>
 <form method="POST" action="">
-{{ form|crispy }}
 {% csrf_token %}
-
+{{ form.as_p }}
 <button type="submit" class="btn btn-primary btn-sm">Login</button>
 </form>
 <br>
