@@ -59,7 +59,8 @@ class Profile(models.Model):
     full_name = models.CharField(max_length=264, blank=True)
     address_1 = models.TextField(max_length=300, blank=True)
     city = models.CharField(max_length=40, blank= True)
-    zip_code = models.CharField(max_length=10, blank=True)
+    zipcode = models.CharField(max_length=10, blank=True, null=True)
+
     country =  models.CharField(max_length=50, blank=True)
     phone =  models.CharField(max_length=20, blank=True)
     date_joined =  models.DateTimeField(auto_now_add = True)
